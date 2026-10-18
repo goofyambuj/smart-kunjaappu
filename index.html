@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4ead8">
+  <title>A Little Piece of Us — Kunji</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <main class="site-shell">
+    <header class="topline">
+      <span class="stamp">THE LITTLE SCRAPBOOK</span>
+      <span class="date-note">made with love · just for you</span>
+    </header>
+
+    <section id="introPage" class="page active" aria-labelledby="introTitle">
+      <div class="cover-card">
+        <div class="tape tape-one"></div>
+        <div class="cover-photo-wrap">
+          <div class="photo-placeholder" aria-label="Photo placeholder">
+            <img id="coverImage" src="assets/kunji-photo.jpg" alt="A favourite photo" onerror="this.style.display='none';document.getElementById('coverPlaceholder').style.display='grid'">
+            <div id="coverPlaceholder" class="placeholder-message">
+              <span class="placeholder-icon">♡</span>
+              <strong>Your favourite photo goes here</strong>
+              <small>Replace assets/kunji-photo.jpg with your picture</small>
+            </div>
+          </div>
+          <span class="photo-caption">one of my favourite humans</span>
+        </div>
+        <div class="cover-copy">
+          <p class="eyebrow">A tiny adventure for</p>
+          <h1 id="introTitle">Kunji<span class="heart">♥</span></h1>
+          <p class="handwritten">a little memory, a little puzzle,<br>and a whole lot of love.</p>
+          <div class="doodle-line"><span>✳</span><span>♡</span><span>✳</span></div>
+          <button id="enterButton" class="primary-button">Open your scrapbook <span>↗</span></button>
+          <p class="tiny-note">P.S. take your time. this one's made just for you.</p>
+        </div>
+        <div class="tape tape-two"></div>
+        <span class="corner-note">VOL. 01<br>OUR LITTLE WORLD</span>
+      </div>
+      <p class="page-foot">collected moments & tiny treasures <span>✿</span></p>
+    </section>
+
+    <section id="puzzlePage" class="page" aria-labelledby="puzzleTitle" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">PAGE 02 · THE LITTLE CHALLENGE</p>
+        <h2 id="puzzleTitle">Put our picture back together</h2>
+        <p class="subheading">Slide each tile into the empty space until the picture is whole.</p>
+      </div>
+      <div class="puzzle-layout">
+        <aside class="side-note">
+          <div class="paper-note rotate-left">
+            <span class="note-pin">✦</span>
+            <p class="handwritten">tiny pieces,<br>one lovely picture.</p>
+            <span class="note-heart">♡</span>
+          </div>
+          <div class="progress-card">
+            <span class="label">YOUR PROGRESS</span>
+            <strong id="progressText">0 / 31 moves</strong>
+            <div class="progress-track"><div id="progressBar"></div></div>
+            <p id="statusText" aria-live="polite">Every move brings it closer.</p>
+          </div>
+        </aside>
+        <div class="puzzle-card">
+          <div class="puzzle-topline">
+            <span class="mini-label">THE PHOTO PUZZLE</span>
+            <span class="piece-count">32 TILES</span>
+          </div>
+          <div id="puzzleBoard" class="puzzle-board" role="group" aria-label="Sliding picture puzzle"></div>
+          <div class="puzzle-controls">
+            <button id="shuffleButton" class="secondary-button">↻ Shuffle again</button>
+            <button id="backButton" class="text-button">← Back to cover</button>
+          </div>
+          <p class="puzzle-help">Tap a tile beside the empty space to slide it. Keyboard users can focus a tile and press Enter.</p>
+        </div>
+      </div>
+      <p class="page-foot">a little patience, a little magic <span>✿</span></p>
+    </section>
+
+    <section id="congratsPage" class="page" aria-labelledby="congratsTitle" hidden>
+      <div class="congrats-card">
+        <div class="confetti-mark">✦ ✿ ♡ ✦</div>
+        <p class="eyebrow">PAGE 03 · YOU DID IT</p>
+        <h2 id="congratsTitle">You put it all back together!</h2>
+        <div class="reveal-photo">
+          <img id="finalImage" src="assets/kunji-photo.jpg" alt="The completed picture" onerror="this.style.display='none';document.getElementById('finalPlaceholder').style.display='grid'">
+          <div id="finalPlaceholder" class="placeholder-message" style="display:none">
+            <span class="placeholder-icon">♡</span>
+            <strong>Your picture will appear here</strong>
+          </div>
+        </div>
+        <p class="handwritten final-message">yeeeeeeeeeeeeeeee<br>You solved the puzzle,<br>ente sothhpody ♡</p>
+        <p class="congrats-body">Every little piece found its place. I hope this made you smile, Kunji. You deserve all the lovely little things. 💌</p>
+        <div class="postmark">MADE WITH<br>ALL MY HEART</div>
+        <button id="replayButton" class="primary-button">Play again ↻</button>
+      </div>
+      <p class="page-foot">end of this page, never the story <span>♡</span></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
